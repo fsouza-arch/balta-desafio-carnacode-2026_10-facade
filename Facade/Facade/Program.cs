@@ -3,8 +3,6 @@ using Facade.Domain.DTOs;
 
 Console.WriteLine("=== Sistema de E-commerce (Padrão Facade) ===\n");
 
-// O CLIENTE AGORA É SIMPLES!
-// Ele não precisa conhecer InventorySystem, PaymentGateway, etc.
 var facade = new OrderFacade();
 
 var order = new OrderDTO
@@ -20,7 +18,6 @@ var order = new OrderDTO
     ShippingAddress = "Rua das Flores, 10"
 };
 
-// Apenas uma chamada resolve toda a complexidade!
 bool success = facade.PlaceOrder(order);
 
 if (success)
